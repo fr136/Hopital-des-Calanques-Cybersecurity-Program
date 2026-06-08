@@ -2,29 +2,40 @@
 
 ## Objectifs
 
-Proteger les utilisateurs contre le phishing et les fuites de donnees.
+Proteger les utilisateurs contre le phishing, les logiciels malveillants, l'usurpation d'identite et les fuites de donnees.
 
-## Regles
+## Perimetre
 
-- interdiction d'utiliser une boite mail personnelle
-- interdiction du transfert automatique vers une adresse privee
-- analyse antivirus des pieces jointes
-- signalement obligatoire des courriels suspects
+La politique s'applique a Microsoft 365, aux boites nominatives, aux boites fonctionnelles validees et aux usages de messagerie lies a l'activite hospitaliere.
 
-## Pieces jointes
+## Regles d'Usage
 
-Blocage des extensions dangereuses :
+- La messagerie professionnelle est reservee aux activites de l'etablissement.
+- L'utilisation d'une messagerie personnelle pour le travail est interdite.
+- Le transfert automatique vers une adresse privee est interdit.
+- Les boites fonctionnelles doivent avoir un responsable designe.
+- Les pieces jointes sensibles doivent etre envoyees via un canal approuve et protege.
+- Les courriels suspects doivent etre signales via le dispositif prevu par la DSI.
 
-- exe
-- bat
-- cmd
-- vbs
-- js
+## Securite des Pieces Jointes
 
-## Sensibilisation
+Les pieces jointes sont analysees avant remise a l'utilisateur. Les extensions dangereuses sont bloquees, notamment :
 
-Campagnes de phishing simulees plusieurs fois par an.
+- `exe` ;
+- `bat` ;
+- `cmd` ;
+- `vbs` ;
+- `js` ;
+- archives protegees par mot de passe non justifiees.
+
+Les documents bureautiques contenant des macros sont bloques ou ouverts en mode protege, sauf derogation validee.
+
+## Protection contre le Phishing
+
+Le filtrage de messagerie applique des controles anti-spam, anti-malware, anti-usurpation et reputation d'URL.
+
+Des campagnes de phishing simulees sont organisees plusieurs fois par an pour entrainer les agents et mesurer les progres.
 
 ## Journalisation
 
-Les evenements de securite sont conserves conformement aux exigences de l'etablissement.
+Les evenements de securite Microsoft 365, les signalements utilisateurs et les actions d'administration sont journalises selon les regles de l'etablissement.

@@ -1,57 +1,85 @@
 # Programme Cybersecurite du Centre Hospitalier des Calanques
 
-Projet fictif de gouvernance cybersecurite pour un etablissement de sante francais.
+Ce depot presente un programme GRC / RSSI junior construit autour d'un etablissement de sante fictif : le Centre Hospitalier des Calanques.
 
-## Objectif
+Le projet est entierement fictif. Il ne contient aucune donnee reelle, aucun nom d'etablissement reel, aucun secret technique et aucune information patient.
 
-Simuler le travail d'une equipe RSSI et GRC dans un hopital de taille moyenne.
+## Objectif Portfolio
 
-## Etablissement fictif
+L'objectif est de demontrer une capacite a structurer un programme cyber adapte a un hopital francais de taille moyenne, avec des politiques, procedures, registres et modeles directement exploitables dans une demarche GRC.
 
-Centre Hospitalier des Calanques.
+Le depot illustre notamment :
 
-Hypotheses de travail :
+- la formalisation de politiques de securite ;
+- l'organisation d'une fonction RSSI ;
+- la gestion des risques cyber ;
+- la gestion des habilitations et comptes privilegies ;
+- la securisation des postes, serveurs, sauvegardes, messagerie et acces web ;
+- la continuite d'activite en contexte hospitalier ;
+- la sensibilisation des agents ;
+- l'encadrement de l'utilisation de l'IA ;
+- la gestion d'une crise ransomware.
 
-- 420 lits
-- 1200 agents
-- urgences
-- SMUR
-- maternite
-- imagerie
-- bloc operatoire
-- laboratoire
-- admissions
-- facturation
-- ressources humaines
+## Contexte Fictif
 
-## Axes de travail
+Le Centre Hospitalier des Calanques est un hopital francais fictif de taille moyenne.
 
-- gouvernance cybersecurite
-- gestion des risques
-- gestion des acces
-- securisation des postes de travail
-- securisation de la messagerie
-- sauvegardes
-- continuite d'activite
-- sensibilisation du personnel
-- encadrement de l'IA
-- crise ransomware
+Hypotheses retenues :
 
-## Structure
+- 420 lits ;
+- 1 200 agents ;
+- services : urgences, SMUR, maternite, bloc operatoire, imagerie, laboratoire, admissions, facturation, RH et direction ;
+- systeme d'information : Active Directory, Microsoft 365, DPI, PACS imagerie, serveurs VMware, pare-feu, Wi-Fi patients, imprimantes reseau et sauvegardes.
+
+## Arborescence
 
 ```text
-01_Gouvernance
-02_Gestion_des_Risques
-03_Gestion_des_Acces
-04_Postes_de_Travail
-05_Messagerie_et_Web
-06_Serveurs_et_Sauvegardes
-07_Continuite_Activite
-08_Sensibilisation
-09_IA_et_Sante
-10_Crise_Ransomware
+01_Gouvernance/
+02_Gestion_des_Risques/
+03_Gestion_des_Acces/
+04_Postes_de_Travail/
+05_Messagerie_et_Web/
+06_Serveurs_et_Sauvegardes/
+07_Continuite_Activite/
+08_Sensibilisation/
+09_IA_et_Sante/
+10_Crise_Ransomware/
+diagrams/
+templates/
 ```
 
-## Positionnement
+## Documents Principaux
 
-Ce projet est un portfolio GRC / RSSI junior. Il montre une capacite a structurer des politiques, procedures et controles cyber adaptes au secteur hospitalier.
+- `01_Gouvernance/` : politique cyber, charte utilisateur, organisation RSSI, comite cyber.
+- `02_Gestion_des_Risques/` : registre des risques, matrice d'evaluation, plan de traitement.
+- `03_Gestion_des_Acces/` : mots de passe, comptes privilegies, habilitations, arrivees et departs.
+- `04_Postes_de_Travail/` : securisation des postes, droits utilisateurs, cles USB, sessions oubliees.
+- `05_Messagerie_et_Web/` : messagerie, navigation Internet, pieces jointes, filtrage web.
+- `06_Serveurs_et_Sauvegardes/` : serveurs, sauvegardes, Windows, Active Directory, Microsoft 365.
+- `07_Continuite_Activite/` : PCA urgences, pannes postes et serveurs, retour papier.
+- `08_Sensibilisation/` : programme annuel, phishing, donnees sensibles, campagnes.
+- `09_IA_et_Sante/` : politique IA, cas autorises, cas interdits, risques IA.
+- `10_Crise_Ransomware/` : scenario, cellule de crise, procedure, rapport, retour d'experience.
+- `diagrams/` : architecture reseau et segmentation VLAN.
+- `templates/` : fiches et formulaires reutilisables.
+
+## Competences Demontrees
+
+- Analyse de risques cyber en environnement de sante.
+- Redaction de politiques et procedures RSSI.
+- Definition de controles GRC et d'indicateurs.
+- Gestion des identites, acces et comptes privilegies.
+- Segmentation reseau et principes de defense en profondeur.
+- Preparation a la crise et continuite d'activite.
+- Communication cyber adaptee a des publics non techniques.
+- Encadrement de l'IA et protection des donnees sensibles.
+
+## Limites du Projet
+
+Ce projet est volontairement documentaire et pedagogique. Il ne remplace pas un audit, une homologation, une analyse juridique ou une mission realisee dans un etablissement reel.
+
+Les mesures proposees sont des exemples coherents pour un portfolio RSSI / GRC junior et doivent etre adaptees avant toute utilisation operationnelle.
+
+## Mention de Fiction
+
+Le Centre Hospitalier des Calanques est un etablissement fictif. Toutes les situations, procedures, risques, architectures et incidents decrits sont inventes pour illustrer une demarche cyber professionnelle.
