@@ -2,11 +2,11 @@
 
 ## Objectif
 
-Garantir que les acces sont crees, modifies et retires au bon moment pour les agents, prestataires, internes, stagiaires et personnels temporaires.
+Garantir que les acces sont crees, modifies et retires au bon moment pour les agents, prestataires, internes, stagiaires et personnels interim.
 
 ## Arrivee
 
-La creation d'un compte repose sur une demande validee par le manager et, si necessaire, par les RH.
+La creation d'un compte repose sur une demande validee par le cadre et, si necessaire, par les RH.
 
 Informations minimales :
 
