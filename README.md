@@ -31,9 +31,22 @@ Hypotheses retenues :
 - services : urgences, SMUR, maternite, bloc operatoire, imagerie, laboratoire, admissions, facturation, RH et direction ;
 - systeme d'information : Active Directory, Microsoft 365, DPI, PACS imagerie, serveurs VMware, pare-feu, Wi-Fi patients, imprimantes reseau et sauvegardes.
 
+## Supports visuels
+
+Ces deux visuels institutionnels fictifs illustrent l'identite du Centre Hospitalier des Calanques : ambiance Mediterranee, Marseille et les Calanques, couleurs douces beige, creme et bleu, style hospitalier moderne et logo fictif Hopital des Calanques.
+
+Ils servent de supports de presentation pour expliquer la gouvernance cyber, la sensibilisation du personnel, la continuite d'activite et la protection des donnees de sante.
+
+### Galerie d'aperçu
+
+| Architecture et gouvernance cybersécurité du Centre Hospitalier des Calanques | La cybersécurité au quotidien et le plan de continuité d'activité du Centre Hospitalier des Calanques |
+|---|---|
+| ![Architecture et gouvernance cybersécurité du Centre Hospitalier des Calanques](assets/images/architecture-gouvernance-cybersecurite-ch-calanques.png) | ![La cybersécurité au quotidien et le plan de continuité d'activité du Centre Hospitalier des Calanques](assets/images/cybersecurite-quotidien-continuite-activite-ch-calanques.png) |
+
 ## Arborescence
 
 ```text
+assets/images/
 01_Gouvernance/
 02_Gestion_des_Risques/
 03_Gestion_des_Acces/
@@ -60,6 +73,7 @@ templates/
 - `08_Sensibilisation/` : programme annuel, phishing, donnees sensibles, campagnes.
 - `09_IA_et_Sante/` : politique IA, cas autorises, cas interdits, risques IA.
 - `10_Crise_Ransomware/` : scenario, cellule de crise, procedure, rapport, retour d'experience.
+- `assets/images/` : visuels institutionnels fictifs du Centre Hospitalier des Calanques.
 - `diagrams/` : architecture reseau et segmentation VLAN.
 - `templates/` : fiches et formulaires reutilisables.
 
