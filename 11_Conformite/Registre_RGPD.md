@@ -1,17 +1,82 @@
-# Registre RGPD
+Registre RGPD
+Objectif
 
-## Traitements identifies
+Documenter les traitements de données à caractère personnel conformément au règlement européen 2016/679.
 
-| Traitement | Finalite | Donnees | Responsable |
-|------------|-----------|-----------|-----------|
-| Admissions | Gestion administrative | Etat civil | Admissions |
-| DPI | Prise en charge medicale | Donnees de sante | Direction des soins |
-| RH | Gestion du personnel | Donnees RH | Ressources Humaines |
+Responsable du traitement
 
-## Mesures de protection
+Centre Hospitalier des Calanques
 
-- Controle d'acces
-- Journalisation
-- Sauvegardes
-- Sensibilisation
-- Chiffrement
+Délégué à la Protection des Données
+
+Fonction fictive :
+DPO du Centre Hospitalier des Calanques
+
+Registre des traitements
+Admissions
+
+Finalité :
+Gestion administrative des patients.
+
+Catégories de données :
+
+Nom
+Prénom
+Date de naissance
+Adresse
+Téléphone
+Sécurité sociale
+
+Base légale :
+
+Mission d'intérêt public.
+
+Conservation :
+
+20 ans conformément aux obligations applicables.
+
+Dossier Patient Informatisé
+
+Finalité :
+
+Prise en charge médicale.
+
+Catégories :
+
+Données médicales
+Comptes rendus
+Résultats biologiques
+Imagerie
+
+Sensibilité :
+
+Très élevée.
+
+Ressources Humaines
+
+Finalité :
+
+Gestion du personnel.
+
+Catégories :
+
+État civil
+Contrat
+Formation
+Évaluation
+Mesures de sécurité
+MFA
+Contrôle d'accès
+Chiffrement
+Journalisation
+Sauvegardes
+Sensibilisation
+Violations de données
+
+Toute violation est signalée :
+
+au RSSI
+au DPO
+à la Direction
+
+Analyse sous 72 heures.
