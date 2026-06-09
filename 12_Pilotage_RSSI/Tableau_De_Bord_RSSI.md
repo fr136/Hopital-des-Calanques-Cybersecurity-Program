@@ -1,15 +1,29 @@
-# Tableau de Bord RSSI
+Tableau de Bord RSSI
+Objectif
 
-## Indicateurs
+Piloter la maturité cyber du Centre Hospitalier des Calanques.
 
-| KPI | Objectif |
-|------|------|
-| MFA active | 100 % |
-| Correctifs critiques < 30 jours | 95 % |
-| Taux de sensibilisation | 100 % |
-| Sauvegardes reussies | >99 % |
-| Incidents critiques | <3 par an |
+Indicateurs Gouvernance
+Indicateur	Objectif
+Politiques validées	100 %
+Réunions comité cyber	4/an
+Plans d'actions clôturés	>90 %
+Indicateurs Techniques
+Indicateur	Objectif
+MFA activée	100 %
+Correctifs critiques <30 jours	95 %
+Antivirus actif	100 %
+Sauvegardes réussies	>99 %
+Indicateurs Humains
+Indicateur	Objectif
+Personnel sensibilisé	100 %
+Campagnes phishing	4/an
+Taux de clic phishing	<5 %
+Indicateurs Incidents
+Indicateur	Objectif
+Incidents critiques	<3/an
+Délai de détection	<24h
+Délai de confinement	<4h
+Revue
 
-## Revue
-
-Le tableau de bord est presente trimestriellement au comite cyber.
+Présentation trimestrielle au Comité Cyber.
