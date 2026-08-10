@@ -1,159 +1,187 @@
-PLAN D'AUDIT INTERNE SMSI
+# Plan d'audit interne cybersécurité — préparation SMSI
 
-Objectif
+## Positionnement
 
-Vérifier l'application effective des mesures de sécurité définies par le SMSI du Centre Hospitalier des Calanques et identifier les écarts nécessitant des actions correctives.
+Ce document décrit un plan d'audit interne cybersécurité pour le Centre Hospitalier des Calanques, dans une logique de préparation à la structuration d'un SMSI.
 
-Référentiels
+Il ne signifie pas qu'un SMSI certifié ISO/IEC 27001 est en place. Les référentiels cités servent ici de sources de bonnes pratiques et de critères de préparation.
 
-* ISO/IEC 27001:2022
-* ISO/IEC 27002:2022
-* NIST Cybersecurity Framework 2.0
-* Guides ANSSI
-* Politique de Sécurité des Systèmes d'Information (PSSI)
-* Procédures internes du Centre Hospitalier des Calanques
+## Objectif
 
-Périmètre
+Vérifier l'application effective des mesures de sécurité définies dans le programme cybersécurité du Centre Hospitalier des Calanques, identifier les écarts et alimenter un plan d'actions correctives.
 
-Gouvernance et pilotage
+## Référentiels de travail
 
-* Politique de sécurité
-* Comité cybersécurité
-* Gestion des risques
-* Indicateurs de sécurité
-* Gestion documentaire du SMSI
-* Revue de direction
+- ISO/IEC 27001:2022 — exigences de système de management, utilisées comme référence de préparation ;
+- ISO/IEC 27002:2022 — mesures de sécurité ;
+- NIST Cybersecurity Framework 2.0 ;
+- guides et recommandations de l'ANSSI ;
+- politique de sécurité des systèmes d'information du projet ;
+- procédures internes fictives du Centre Hospitalier des Calanques.
 
-Gestion des accès
+## Périmètre
 
-* Création des comptes
-* Modification des habilitations
-* Suppression des comptes
-* Comptes administrateurs
-* Comptes techniques
-* Comptes prestataires
-* Revues périodiques des habilitations
+### Gouvernance et pilotage
 
-Gestion des actifs
+- politique de sécurité ;
+- comité cybersécurité ;
+- gestion des risques ;
+- indicateurs de sécurité ;
+- responsabilités RSSI / DSI / DPO ;
+- suivi des plans d'action ;
+- gestion documentaire.
 
-* Inventaire matériel
-* Inventaire logiciel
-* Classification de l'information
-* Gestion du cycle de vie des actifs
+### Gestion des accès
 
-Protection des postes et serveurs
+- création des comptes ;
+- modification des habilitations ;
+- suppression des comptes ;
+- comptes administrateurs ;
+- comptes techniques ;
+- comptes prestataires ;
+- revues périodiques des habilitations.
 
-* Antivirus / EDR
-* Gestion des correctifs
-* Chiffrement
-* Durcissement des systèmes
-* Gestion des vulnérabilités
+### Gestion des actifs
 
-Réseau
+- inventaire matériel ;
+- inventaire logiciel ;
+- classification de l'information ;
+- gestion du cycle de vie des actifs.
 
-* Segmentation
-* Pare-feu
-* VPN
-* Wi-Fi
-* Journalisation réseau
+### Protection des postes et serveurs
 
-Sauvegardes
+- antivirus / EDR ;
+- gestion des correctifs ;
+- chiffrement ;
+- durcissement ;
+- gestion des vulnérabilités ;
+- verrouillage des sessions.
 
-* Politique de sauvegarde
-* Tests de restauration
-* Sauvegardes hors ligne
-* Conservation des données
+### Réseau
 
-Gestion des incidents
+- segmentation ;
+- pare-feu ;
+- VPN ;
+- Wi-Fi ;
+- journalisation et supervision réseau.
 
-* Détection
-* Escalade
-* Traitement
-* Retour d'expérience
-* Exercices de crise
+### Sauvegardes et continuité
 
-Sensibilisation
+- politique de sauvegarde ;
+- tests de restauration ;
+- copies protégées / hors ligne selon l'architecture ;
+- ordre de restauration ;
+- procédures de fonctionnement dégradé ;
+- exercices de continuité.
 
-* Formation cybersécurité
-* Campagnes phishing
-* Intégration des nouveaux arrivants
+### Gestion des incidents
 
-Conformité
+- détection ;
+- qualification ;
+- escalade ;
+- traitement ;
+- retour d'expérience ;
+- exercices de crise.
 
-* RGPD
-* Hébergement des données de santé
-* Gestion des sous-traitants
-* Clauses de sécurité contractuelles
+### Sensibilisation
 
-Méthodologie
+- formation cybersécurité ;
+- campagnes de phishing simulé ;
+- intégration des nouveaux arrivants ;
+- sensibilisation ciblée des services critiques.
 
-Phase 1 : Préparation
+### Conformité et données
 
-* Définition du périmètre
-* Désignation des auditeurs
-* Collecte documentaire
-* Planification des entretiens
+- gouvernance RGPD ;
+- protection des données de santé ;
+- hébergement des données de santé lorsque le contexte l'exige ;
+- gestion des sous-traitants ;
+- clauses de sécurité contractuelles ;
+- usages d'intelligence artificielle.
 
-Phase 2 : Réalisation
+## Méthodologie
 
-* Entretiens
-* Revue documentaire
-* Vérifications techniques
-* Échantillonnage
+### Phase 1 — Préparation
 
-Phase 3 : Analyse
+- définition du périmètre ;
+- identification des critères ;
+- désignation des auditeurs ;
+- collecte documentaire ;
+- planification des entretiens et tests.
 
-* Identification des écarts
-* Analyse des causes
-* Évaluation des risques
+### Phase 2 — Réalisation
 
-Phase 4 : Restitution
+- entretiens ;
+- revue documentaire ;
+- vérifications techniques ;
+- observations terrain ;
+- échantillonnage.
 
-* Rapport d'audit
-* Présentation des résultats
-* Validation des actions correctives
+### Phase 3 — Analyse
 
-Échelle de classification
+- identification des écarts ;
+- collecte et conservation des preuves ;
+- analyse des causes ;
+- évaluation du risque associé ;
+- préparation des recommandations.
 
-Critique
+### Phase 4 — Restitution
 
-* Risque immédiat pour la confidentialité, l'intégrité ou la disponibilité
-* Non-conformité réglementaire majeure
+- rapport d'audit ;
+- présentation des résultats ;
+- validation des responsables d'action ;
+- échéances et critères de clôture.
 
-Majeur
+## Classification des constats
 
-* Contrôle absent ou inefficace
-* Risque significatif pour l'établissement
+### Critique
 
-Mineur
+- exposition immédiate importante pour la confidentialité, l'intégrité ou la disponibilité ;
+- risque significatif pour la continuité des soins ;
+- non-conformité majeure nécessitant une action urgente.
 
-* Contrôle partiellement appliqué
-* Amélioration nécessaire
+### Majeur
 
-Point fort
+- contrôle absent ou inefficace ;
+- risque significatif pour l'établissement ;
+- écart systémique ou répété.
 
-* Bonne pratique observée
+### Mineur
 
-Preuves attendues
+- contrôle partiellement appliqué ;
+- écart limité nécessitant correction ou amélioration.
 
-* Procédures
-* Comptes-rendus
-* Journaux techniques
-* Captures d'écran
-* Exports d'outils
-* Inventaires
-* Rapports de tests
+### Point fort
 
-Livrables
+- bonne pratique observée et reproductible.
 
-* Rapport d'audit interne
-* Registre des écarts
-* Plan d'actions correctives
-* Tableau de suivi des actions
-* Synthèse pour la direction
+## Preuves attendues
 
-Fréquence
+- politiques et procédures ;
+- comptes rendus ;
+- journaux techniques ;
+- captures d'écran maîtrisées ;
+- exports d'outils ;
+- inventaires ;
+- rapports de tests ;
+- tickets ou traces de traitement ;
+- preuves d'exercices ou de restauration.
 
-* Audit interne annuel du SMSI
-* Audit complémentaire après incident majeur
-* Audit complémentaire après évolution significative du système d'information
+## Livrables
+
+- rapport d'audit interne cybersécurité ;
+- registre des constats ;
+- plan d'actions correctives ;
+- tableau de suivi ;
+- synthèse destinée à la direction.
+
+## Fréquence proposée
+
+- audit interne annuel du programme cybersécurité ;
+- audit complémentaire après incident majeur ;
+- audit complémentaire après évolution significative du système d'information ;
+- audits thématiques ciblés selon les risques prioritaires.
+
+## Évolution vers un SMSI
+
+Une démarche ISO/IEC 27001 complète nécessiterait notamment de formaliser le contexte, les parties intéressées, le périmètre du SMSI, les objectifs de sécurité, la méthode d'appréciation des risques, le plan de traitement, les contrôles applicables, les revues de direction et le cycle d'amélioration continue. Ces éléments dépassent volontairement le périmètre actuel de ce portfolio.
