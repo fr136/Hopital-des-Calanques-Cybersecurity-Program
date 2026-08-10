@@ -1,127 +1,123 @@
-Analyse EBIOS RM Simplifiée
-Contexte
+# Analyse de risques simplifiée inspirée d'EBIOS Risk Manager
+
+## Positionnement du document
+
+Ce document est un exercice pédagogique de portfolio inspiré des principes d'EBIOS Risk Manager. Il ne constitue pas une étude EBIOS RM complète conduite selon l'ensemble des ateliers de la méthode ANSSI et ne remplace pas une analyse de risques réalisée avec les parties prenantes d'un établissement réel.
+
+L'objectif est de démontrer une capacité à identifier les biens essentiels, les événements redoutés, les sources de risque, les scénarios majeurs et les mesures de traitement dans un contexte hospitalier fictif.
+
+## Contexte
 
 Le Centre Hospitalier des Calanques assure une mission de service public de santé. Son système d'information supporte les activités critiques de prise en charge des patients, de gestion administrative et de coordination médicale.
 
-L'indisponibilité ou la compromission du système d'information peut avoir des conséquences directes sur la continuité des soins et la sécurité des patients.
+L'indisponibilité, l'altération ou la compromission de ce système d'information peuvent avoir des conséquences directes sur la continuité des soins, la confidentialité des données et la sécurité des patients.
 
-Périmètre étudié
+## Périmètre étudié
 
-Le périmètre comprend :
+- Dossier Patient Informatisé (DPI)
+- PACS / imagerie
+- Microsoft 365
+- Active Directory
+- réseau hospitalier
+- infrastructure VMware
+- sauvegardes
+- postes utilisateurs
 
-Dossier Patient Informatisé (DPI)
-PACS Imagerie
-Microsoft 365
-Active Directory
-Réseau hospitalier
-Infrastructure VMware
-Sauvegardes
-Postes utilisateurs
-Biens essentiels
-Bien essentiel	Description
-Soins aux patients	Continuité des soins
-Confidentialité des données médicales	Respect du secret médical
-Disponibilité des applications	Maintien de l'activité
-Intégrité des données médicales	Fiabilité des diagnostics
-Biens supports
-Bien support	Description
-Active Directory	Gestion des identités
-Microsoft 365	Communication
-Réseau	Connectivité
-VMware	Hébergement
-Sauvegardes	Reprise après incident
-Événements redoutés
-ER1
+## Biens essentiels
 
-Indisponibilité du DPI pendant plus de 24 heures.
+| Bien essentiel | Enjeu principal |
+|---|---|
+| Soins aux patients | Continuité et qualité des soins |
+| Confidentialité des données médicales | Respect du secret médical et de la vie privée |
+| Disponibilité des applications | Maintien de l'activité clinique et administrative |
+| Intégrité des données médicales | Fiabilité des informations utilisées pour la prise en charge |
 
-Impact :
+## Biens supports
 
-Retard de prise en charge
-Retour en mode papier
-Risque patient
-ER2
+| Bien support | Rôle |
+|---|---|
+| Active Directory | Gestion des identités et des accès |
+| Microsoft 365 | Communication et collaboration |
+| Réseau | Connectivité entre services et applications |
+| VMware | Hébergement de services et applications |
+| Sauvegardes | Reprise après incident |
+| Postes utilisateurs | Accès quotidien aux applications métiers |
 
-Divulgation de données médicales.
+## Événements redoutés
 
-Impact :
+### ER1 — Indisponibilité prolongée du DPI
 
-Atteinte à la vie privée
-Notification CNIL
-Impact réputationnel
-ER3
+Conséquences possibles :
 
-Altération de données médicales.
+- retard de prise en charge ;
+- fonctionnement en mode dégradé ;
+- augmentation du risque d'erreur ;
+- perturbation de la coordination des soins.
 
-Impact :
+### ER2 — Divulgation de données de santé
 
-Erreurs médicales
-Mauvaise prise en charge
-Sources de risque
-Cybercriminels
+Conséquences possibles :
 
-Objectif :
+- atteinte à la vie privée ;
+- violation de données personnelles ;
+- obligations de gestion et, selon le niveau de risque, de notification ;
+- impact réputationnel et organisationnel.
 
-Rançon
-Vol de données
-Employé malveillant
+### ER3 — Altération de données médicales
 
-Objectif :
+Conséquences possibles :
 
-Sabotage
-Fuite d'informations
-Erreur humaine
+- informations erronées utilisées dans la prise en charge ;
+- risque pour le patient ;
+- perte de confiance dans les applications et les données.
 
-Objectif :
+## Sources de risque et objectifs
 
-Non intentionnel
-Prestataire compromis
+| Source de risque | Objectifs possibles |
+|---|---|
+| Cybercriminel | Rançon, fraude, vol ou revente de données |
+| Employé malveillant | Sabotage, exfiltration, divulgation |
+| Erreur humaine | Action non intentionnelle, mauvaise configuration, mauvaise manipulation |
+| Prestataire compromis | Accès indirect au SI, propagation d'une compromission |
 
-Objectif :
+## Scénarios stratégiques simplifiés
 
-Propagation d'une compromission
-Scénarios stratégiques
-Scénario 1
+### Scénario 1 — Phishing d'un personnel administratif
 
-Campagne de phishing ciblant le personnel administratif.
+Chaîne simplifiée : phishing → vol d'identifiants → compromission Microsoft 365 → mouvement ou collecte d'informations → propagation éventuelle d'un ransomware.
 
-Conséquence :
+Niveau initial estimé : **Critique**.
 
-Vol d'identifiants
-Compromission M365
-Déploiement ransomware
+### Scénario 2 — Compromission d'un compte administrateur
 
-Niveau : Critique
+Chaîne simplifiée : vol d'un compte privilégié → élévation du contrôle sur le domaine → accès aux serveurs et services critiques → tentative de neutralisation des protections et sauvegardes.
 
-Scénario 2
+Niveau initial estimé : **Critique**.
 
-Compte administrateur compromis.
+### Scénario 3 — Utilisation d'une IA publique avec des données sensibles
 
-Conséquence :
+Chaîne simplifiée : saisie de données sensibles dans un outil non approuvé → transfert vers un tiers → perte de maîtrise de la confidentialité et des conditions de conservation/réutilisation.
 
-Contrôle du domaine Active Directory
-Désactivation des sauvegardes
+Niveau initial estimé : **Élevé**.
 
-Niveau : Critique
+## Mesures de traitement prioritaires
 
-Scénario 3
+| Mesure | Priorité |
+|---|---|
+| MFA sur les accès sensibles et distants | Haute |
+| Sauvegardes protégées et tests de restauration | Haute |
+| Revue périodique des habilitations | Haute |
+| Sensibilisation au phishing et au signalement | Haute |
+| Segmentation et limitation des privilèges | Haute |
+| Journalisation centralisée et détection | Moyenne |
+| Processus de validation des usages IA | Moyenne |
 
-Utilisation d'une IA publique avec données patients.
+## Limites
 
-Conséquence :
+Cette analyse ne décrit pas l'écosystème complet, les couples sources de risque / objectifs visés, ni l'ensemble des scénarios stratégiques et opérationnels attendus dans une étude EBIOS RM exhaustive.
 
-Fuite de données de santé
+Elle sert de support pédagogique à la démarche GRC du projet.
 
-Niveau : Élevé
+## Révision
 
-Plan de traitement
-Mesure	Priorité
-MFA obligatoire	Haute
-Sauvegardes hors ligne	Haute
-Revue trimestrielle des habilitations	Haute
-Sensibilisation phishing	Haute
-Journalisation centralisée	Moyenne
-Supervision SOC	Moyenne
-Révision
-
-L'analyse est revue annuellement ou après tout incident majeur.
+L'analyse est revue annuellement, après tout incident majeur ou lors d'une évolution significative du système d'information ou de son contexte de menace.
