@@ -6,7 +6,7 @@ Le projet est entièrement fictif. Il ne contient aucune donnée réelle, aucun 
 
 ## Objectif du portfolio
 
-L'objectif est de démontrer une capacité à structurer une démarche cybersécurité adaptée à un hôpital français de taille moyenne : gouvernance, gestion des risques, accès, continuité d'activité, sensibilisation, conformité, IA et gestion de crise.
+L'objectif est de démontrer une capacité à structurer une démarche cybersécurité adaptée à un hôpital français de taille moyenne : gouvernance, gestion des risques, accès, continuité d'activité, sensibilisation, conformité, IA, amélioration continue et gestion de crise.
 
 Ce dépôt ne prétend pas représenter un SMSI certifié ni une mission RSSI réellement conduite dans un établissement. Il s'agit d'un environnement pédagogique permettant de transformer des connaissances théoriques en politiques, procédures, registres, scénarios et décisions de pilotage cohérents.
 
@@ -60,13 +60,12 @@ Ces visuels institutionnels fictifs illustrent l'identité du Centre Hospitalier
 09_IA_et_Sante/
 10_Crise_Ransomware/
 11_Conformite/
+12_Amelioration_Continue/
 13_Audit/
 assets/images/
 diagrams/
 templates/
 ```
-
-> La numérotation reflète l'évolution progressive du portfolio. L'absence d'un dossier `12_` n'a pas de signification fonctionnelle.
 
 ## Documents principaux
 
@@ -82,6 +81,7 @@ templates/
 - `09_IA_et_Sante/` : politique IA, cas autorisés/interdits et registre des risques IA.
 - `10_Crise_Ransomware/` : scénario, chronologie, cellule de crise, procédure, rapport et retour d'expérience.
 - `11_Conformite/` : exemples de gouvernance RGPD et conformité appliqués au contexte fictif.
+- `12_Amelioration_Continue/` : tableau de bord, indicateurs, preuves et cycle d'amélioration.
 - `13_Audit/` : plan d'audit interne cybersécurité dans une logique de préparation SMSI.
 - `diagrams/` : architecture réseau et segmentation VLAN.
 - `templates/` : fiches et formulaires réutilisables.
@@ -117,6 +117,13 @@ templates/
 - encadrement des usages d'intelligence artificielle ;
 - articulation RSSI / DPO ;
 - réflexion sur les sous-traitants et services externalisés.
+
+### Amélioration continue
+
+- tableau de bord orienté décision ;
+- indicateurs associés à des propriétaires, fréquences, cibles et preuves ;
+- suivi des écarts et des actions correctives ;
+- réévaluation des risques après vérification de l'efficacité des mesures.
 
 ## Analyse de risques
 
