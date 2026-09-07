@@ -1,0 +1,53 @@
+# VMware / virtualisation
+VM/
+**/*.vmdk
+**/*.vmem
+**/*.vmsn
+**/*.vmss
+**/*.nvram
+**/*.lck/
+*.ova
+*.ovf
+*.iso
+
+# Sauvegardes et dumps
+BACKUPS/
+backups/
+*.sql
+*.sql.gz
+*.tar.gz
+*.bak
+*.dump
+
+# Exports sensibles / configurations brutes
+EXPORTS/
+exports/
+*pfSense*.xml
+PFSENSE-CONFIG.xml
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Secrets / variables
+.env
+.env.*
+credentials*
+secrets*
+passwords*
+*credential*
+*secret*
+
+# Temporaire / récupération
+TEMP/
+temp/
+*.tmp
+*.swp
+*.log
+Thumbs.db
+.DS_Store
+
+# Archives de travail
+*.zip
+*.7z
+*.rar
