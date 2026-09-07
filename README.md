@@ -49,13 +49,13 @@ Segments virtuels : ADMIN `10.20.10.0/24`, SERVEURS `10.20.20.0/24`, UTILISATEUR
 - architecture AS IS / TO BE ;
 - PRA ;
 - pré-analyse de risques et référentiel GRC ;
-- ordre de mission du pentest.
+- ordre de mission du pentest préparé.
 
 ## Phase actuelle
 
 **Socle technique : validé.**  
 **Architecture, risques, PRA et GRC : documentés.**  
-**Pentest de WEB01 : autorisé et préparé, non exécuté à ce stade.**
+**Pentest de WEB01 : ordre de mission préparé, test non exécuté à ce stade.**
 
 Boucle suivante :
 
