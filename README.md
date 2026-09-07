@@ -4,7 +4,13 @@ RésiSanté est le **projet principal** de ce dépôt : conception, sécurisatio
 
 Le projet s’appuie sur un établissement entièrement fictif, **l’Hôpital des Calanques**, utilisé comme cadre métier et GRC. Aucun système hospitalier réel, aucune donnée patient réelle et aucun secret de production ne sont utilisés.
 
-**Présentation courte du projet : [`DEMO.md`](DEMO.md)**
+## Démonstration
+
+▶ **[Voir la démonstration vidéo RésiSanté — 4 min 54](01_RESISANTE/Projet_ResiSante_DEMO_FINALE_ZOOM_COURTE.mp4)**
+
+La vidéo présente l’architecture du laboratoire, la segmentation pfSense, Active Directory, les contrôles d’accès, la supervision Wazuh, les tests de sauvegarde/restauration, le volet GRC et la préparation du pentest contrôlé.
+
+📄 **[Lire la synthèse courte du projet](DEMO.md)**
 
 ## Vue d’ensemble
 
