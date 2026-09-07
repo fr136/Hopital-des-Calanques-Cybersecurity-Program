@@ -1,5 +1,11 @@
 # Démo — RésiSanté
 
+## Vidéo de présentation
+
+▶ **[Voir la démonstration vidéo RésiSanté — 4 min 54](01_RESISANTE/Projet_ResiSante_DEMO_FINALE_ZOOM_COURTE.mp4)**
+
+La vidéo présente de façon synthétique l’architecture du laboratoire, la segmentation pfSense, Active Directory, les contrôles d’accès, Wazuh, les tests de restauration, le volet GRC et la préparation du pentest contrôlé.
+
 Ce document sert de **source de présentation courte** du projet RésiSanté. Il est conçu pour permettre à un lecteur, un jury, un recruteur ou un outil de synthèse de comprendre rapidement **ce qui a été réellement construit, pourquoi, comment cela a été vérifié et ce qui reste à faire**.
 
 > RésiSanté est un projet pédagogique réalisé dans un laboratoire AIS. L’Hôpital des Calanques est un établissement entièrement fictif utilisé comme contexte métier et GRC. Aucun système hospitalier réel, aucune donnée patient réelle et aucun secret de production ne sont utilisés.
@@ -159,6 +165,7 @@ RésiSanté permet de démontrer de façon cohérente :
 
 ## 9. Parcours dans le dépôt
 
+- [Vidéo de démonstration RésiSanté](01_RESISANTE/Projet_ResiSante_DEMO_FINALE_ZOOM_COURTE.mp4)
 - [RésiSanté — projet principal](01_RESISANTE/README.md)
 - [Baseline](01_RESISANTE/00_Baseline/)
 - [Architecture](01_RESISANTE/01_Architecture/)
@@ -171,13 +178,13 @@ RésiSanté permet de démontrer de façon cohérente :
 
 ## 10. Trame recommandée pour une vidéo courte
 
-Une présentation de 3 à 4 minutes doit privilégier les faits et preuves :
+Une présentation de 3 à 5 minutes doit privilégier les faits et preuves :
 
-1. **Contexte** — 15 à 20 secondes : objectif de RésiSanté et caractère fictif de l’Hôpital des Calanques.
-2. **Architecture** — 30 à 40 secondes : pfSense, AD/DNS, serveur de fichiers, poste client, Wazuh, WEB01 en DMZ.
-3. **Preuves** — 60 à 90 secondes : GPO, ACL, Wazuh 4688, PowerShell, FIM, restauration et SHA-256.
-4. **GRC / risques / PRA** — 30 à 40 secondes : montrer que la technique est reliée au risque et à la continuité.
-5. **Pentest** — 30 à 40 secondes : périmètre autorisé, Kali isolé, détection, rapport, remédiation, retest.
-6. **Conclusion** — 15 secondes : `configuration → test → preuve → risque → amélioration`.
+1. **Contexte** : objectif de RésiSanté et caractère fictif de l’Hôpital des Calanques.
+2. **Architecture** : pfSense, AD/DNS, serveur de fichiers, poste client, Wazuh, WEB01 en DMZ.
+3. **Preuves** : GPO, ACL, Wazuh 4688, PowerShell, FIM, restauration et SHA-256.
+4. **GRC / risques / PRA** : montrer que la technique est reliée au risque et à la continuité.
+5. **Pentest** : périmètre autorisé, Kali isolé, détection, rapport, remédiation, retest.
+6. **Conclusion** : `configuration → test → preuve → risque → amélioration`.
 
 La vidéo doit éviter les visuels génériques de cybersécurité et privilégier les vraies captures du laboratoire, les schémas d’architecture et les preuves techniques.
