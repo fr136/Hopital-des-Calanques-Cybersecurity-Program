@@ -1,0 +1,58 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.04",
+  "_id": "lBlFbKAB1GOrLPQywOfU",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {"type": "log"},
+    "agent": {"ip": "10.20.30.10", "name": "PC-FACTU01", "id": "001"},
+    "manager": {"name": "wazuh-server"},
+    "data": {
+      "win": {
+        "eventdata": {
+          "subjectLogonId": "0x1203c3",
+          "parentProcessName": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "subjectDomainName": "RESISANTE",
+          "tokenElevationType": "%%1936",
+          "newProcessId": "0x1558",
+          "mandatoryLabel": "S-1-16-12288",
+          "newProcessName": "C:\\Windows\\System32\\notepad.exe",
+          "targetLogonId": "0x0",
+          "subjectUserSid": "S-1-5-21-274335789-1529018158-4234390573-500",
+          "processId": "0x14f4",
+          "commandLine": "\"C:\\WINDOWS\\system32\\notepad.exe\"",
+          "targetUserSid": "S-1-0-0",
+          "subjectUserName": "Administrateur"
+        },
+        "system": {
+          "eventID": "4688",
+          "keywords": "0x8020000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "version": "2",
+          "systemTime": "2026-09-04T09:55:50.0039577Z",
+          "eventRecordID": "5272",
+          "threadID": "2832",
+          "computer": "PC-FACTU01.resisante.local",
+          "task": "13312",
+          "processID": "4",
+          "severityValue": "AUDIT_SUCCESS",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 14,
+      "mail": false,
+      "level": 3,
+      "description": "A process was created.",
+      "groups": ["windows", " WEF"],
+      "id": "67027"
+    },
+    "location": "EventChannel",
+    "decoder": {"name": "windows_eventchannel"},
+    "timestamp": "2026-09-04T09:55:50.328+0000"
+  }
+}
