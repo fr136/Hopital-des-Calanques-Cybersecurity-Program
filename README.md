@@ -1,93 +1,89 @@
-# Hôpital des Calanques — Programme cybersécurité & laboratoire RésiSanté
+# RésiSanté — sécurisation d’un périmètre représentatif de SI hospitalier
 
-Portfolio de cybersécurité construit autour d’un **établissement de santé entièrement fictif**. Le dépôt combine un programme GRC/RSSI structuré et un laboratoire technique réellement déployé sous VMware.
+RésiSanté est le **projet principal** de ce dépôt : conception, sécurisation, supervision, continuité et audit d’un périmètre technique représentatif d’un système d’information de santé.
 
-> Aucun système hospitalier réel, aucune donnée patient réelle et aucun secret de production ne sont utilisés.
+Le projet s’appuie sur un établissement entièrement fictif, **l’Hôpital des Calanques**, utilisé comme cadre métier et GRC. Aucun système hospitalier réel, aucune donnée patient réelle et aucun secret de production ne sont utilisés.
 
-## En 30 secondes
+## Vue d’ensemble
 
-Le projet montre une démarche de sécurisation de bout en bout :
+L’objectif n’est pas d’empiler des technologies, mais de démontrer une démarche complète :
 
-**contexte métier → gouvernance → analyse de risques → mesures de sécurité → continuité → gestion de crise → amélioration continue → audit → validation technique**.
+**besoin métier → architecture → segmentation → identités et habilitations → durcissement → supervision → sauvegarde/restauration → analyse de risques → PRA/GRC → audit contrôlé → remédiation → retest**.
 
-Deux volets sont distingués :
+Deux volets se complètent :
 
-- **Hôpital des Calanques** : contexte organisationnel fictif, politiques, risques, continuité, conformité, pilotage et crise ;
-- **RésiSanté** : laboratoire technique représentatif permettant de mettre en œuvre et de vérifier une partie des contrôles documentés.
+| Volet | Rôle |
+|---|---|
+| **[`01_RESISANTE/`](01_RESISANTE/)** | mise en œuvre technique, preuves, architecture, risques, PRA, GRC et pentest contrôlé |
+| **[`02_HOPITAL_DES_CALANQUES/`](02_HOPITAL_DES_CALANQUES/)** | contexte métier fictif, gouvernance, politiques, continuité, crise, conformité et pilotage |
 
-Le projet ne revendique ni certification ISO/IEC 27001, ni étude EBIOS Risk Manager complète, ni mission réalisée dans un établissement réel.
+## RésiSanté — état actuel
 
-## Parcours recommandé
+Le laboratoire est réellement déployé sous VMware sur un hôte unique, avec les limites que cela implique.
 
-| Axe | Dossier | Finalité |
+| Système | Fonction | Adresse |
 |---|---|---|
-| Pilotage | [`00_Pilotage/`](00_Pilotage/) | feuille de route, priorités, lecture du programme |
-| Gouvernance | [`01_Gouvernance/`](01_Gouvernance/) | politique, rôles, charte, comité cyber |
-| Risques | [`02_Gestion_des_Risques/`](02_Gestion_des_Risques/) | actifs, scénarios, cotation, traitement |
-| Protection | [`03_Gestion_des_Acces/`](03_Gestion_des_Acces/) à [`06_Serveurs_et_Sauvegardes/`](06_Serveurs_et_Sauvegardes/) | identités, postes, web, serveurs, sauvegardes |
-| Résilience | [`07_Continuite_Activite/`](07_Continuite_Activite/) et [`10_Crise_Ransomware/`](10_Crise_Ransomware/) | continuité, fonctionnement dégradé, crise et RETEX |
-| Facteur humain | [`08_Sensibilisation/`](08_Sensibilisation/) | programme de sensibilisation et phishing |
-| Nouveaux usages | [`09_IA_et_Sante/`](09_IA_et_Sante/) | gouvernance des usages IA en contexte santé |
-| Conformité | [`11_Conformite/`](11_Conformite/) | articulation sécurité / données personnelles |
-| Amélioration | [`12_Amelioration_Continue/`](12_Amelioration_Continue/) | indicateurs, preuves, actions correctives |
-| Assurance | [`13_Audit/`](13_Audit/) | préparation et logique d’audit interne |
-| Mise en œuvre | [`14_ResiSante_Lab/`](14_ResiSante_Lab/) | laboratoire, preuves, PRA, GRC et pentest contrôlé |
+| FW01 | pfSense — routage et filtrage | `.1` sur chaque segment |
+| DC01 | Active Directory / DNS | `10.20.20.10` |
+| SRV-FICHIERS01 | partages et ACL | `10.20.20.20` |
+| PC-FACTU01 | poste utilisateur | `10.20.30.10` |
+| WAZUH01 | supervision / SIEM | `10.20.40.10` |
+| WEB01 | Debian / Apache / MariaDB / WordPress | `10.20.50.10` |
+| KALI01 | poste d’audit prévu | `10.20.60.10` |
 
-Chaque dossier contient désormais une page d’entrée expliquant **pourquoi les documents existent, comment ils s’articulent et ce qu’ils démontrent**.
+Segments virtuels : ADMIN `10.20.10.0/24`, SERVEURS `10.20.20.0/24`, UTILISATEURS `10.20.30.0/24`, SECURITE `10.20.40.0/24`, DMZ `10.20.50.0/24`, PENTEST `10.20.60.0/24` prévu pour l’audit.
 
-## Livrables phares
+> Les VMnet VMware sont des segments L2 virtuels ; ils ne sont pas présentés comme des VLAN 802.1Q réels.
 
-- feuille de route RSSI 30 / 90 / 180 jours ;
-- politique cybersécurité, organisation RSSI et charte utilisateur ;
-- registre des actifs, registre des risques et plan de traitement ;
-- procédures d’habilitation et de gestion des comptes privilégiés ;
-- stratégie de sauvegarde et continuité des urgences ;
-- scénario complet de crise ransomware : chronologie, cellule de crise, procédure, rapport et RETEX ;
-- tableau de bord d’amélioration continue ;
-- plan d’audit interne ;
-- laboratoire RésiSanté avec segmentation pfSense, AD/DNS, serveur de fichiers, Wazuh, WordPress en DMZ, sauvegarde/restauration et pentest contrôlé en préparation.
+### Contrôles déjà validés
 
-## RésiSanté — validation technique
-
-Le laboratoire apporte des preuves concrètes aux choix documentaires :
-
-- segmentation et filtrage réseau ;
-- domaine `resisante.local` avec AD DS / DNS ;
-- groupes, ACL et GPO ;
+- segmentation et filtrage pfSense ;
+- domaine `resisante.local`, AD DS et DNS ;
+- groupes, ACL et tests d’accès sur le serveur de fichiers ;
+- GPO de durcissement, pare-feu et audit ;
 - centralisation Wazuh des événements Windows ;
-- FIM temps réel sur WEB01 ;
-- sauvegardes et restaurations testées ;
+- FIM temps réel sur `WEB01` ;
+- sauvegarde/restauration de `SRV-FICHIERS01` avec contrôle SHA-256 ;
+- sauvegarde/restauration des fichiers WordPress et de MariaDB ;
+- baseline v1 ;
 - architecture AS IS / TO BE ;
-- PRA et référentiel GRC ;
-- ordre de mission pentest préparé.
+- PRA ;
+- pré-analyse de risques et référentiel GRC ;
+- ordre de mission du pentest.
 
-Le détail du lab est centralisé dans [`14_ResiSante_Lab/README.md`](14_ResiSante_Lab/README.md).
+## Phase actuelle
+
+**Socle technique : validé.**  
+**Architecture, risques, PRA et GRC : documentés.**  
+**Pentest de WEB01 : autorisé et préparé, non exécuté à ce stade.**
+
+Boucle suivante :
+
+`baseline v1 → vulnérabilité contrôlée → pentest → détection → rapport → remédiation → retest → baseline v2`
+
+## Pourquoi l’Hôpital des Calanques existe
+
+Le dossier [`02_HOPITAL_DES_CALANQUES/`](02_HOPITAL_DES_CALANQUES/) donne un cadre réaliste aux décisions techniques : gouvernance, risques, habilitations, continuité d’activité, crise ransomware, sensibilisation, conformité et amélioration continue.
+
+Il s’agit d’un **contexte pédagogique fictif**, pas d’une mission RSSI réalisée dans un établissement réel. RésiSanté reste la vitrine principale du dépôt ; l’Hôpital des Calanques sert de cadre métier et documentaire.
 
 ## Positionnement méthodologique
 
-Les documents historiques de gestion des risques utilisent certains concepts inspirés d’EBIOS Risk Manager à des fins pédagogiques. Le laboratoire RésiSanté utilise, lui, une **analyse qualitative simplifiée par matrice vraisemblance × impact**. Aucune étude EBIOS RM complète n’est revendiquée.
-
-ISO/IEC 27001 et ISO/IEC 27002 servent de références de structuration et de bonnes pratiques. Pour la transposition au secteur santé, le projet prend également en compte les principes de la PGSSI-S. Cela ne constitue pas une certification ni une conformité formellement démontrée.
-
-## État actuel
-
-**Socle technique et documentaire : réalisé.**  
-**PRA, architecture et GRC du lab : documentés.**  
-**Pentest contrôlé de WEB01 : préparé, non exécuté à ce stade.**
-
-La prochaine boucle du laboratoire est :
-
-`autorisation → vulnérabilité contrôlée → pentest → détection → rapport → remédiation → retest → baseline v2`
+- analyse RésiSanté : **matrice qualitative vraisemblance × impact** ;
+- certains exercices historiques utilisent des concepts inspirés d’EBIOS Risk Manager, sans revendiquer une étude EBIOS RM complète ;
+- ISO/IEC 27001 et 27002 servent de références de structuration ;
+- la PGSSI-S est prise en compte pour la transposition au secteur santé ;
+- aucune certification, homologation ou conformité complète n’est revendiquée.
 
 ## Limites assumées
 
-- établissement, incidents et gouvernance fictifs ;
-- laboratoire sur un hôte physique unique ;
-- périmètre représentatif et non reproduction exhaustive d’un SI hospitalier ;
-- absence de haute disponibilité réelle ;
-- sauvegardes de laboratoire non équivalentes à une stratégie de production hors site / immuable ;
-- aucun audit réel d’un tiers ni aucune donnée de santé réelle.
+- un seul hôte physique ;
+- pas de haute disponibilité réelle ;
+- sauvegardes du lab non équivalentes à une stratégie de production hors site / immuable ;
+- périmètre représentatif, non reproduction exhaustive d’un SI hospitalier ;
+- aucune donnée réelle ;
+- aucun audit offensif sur un système tiers.
 
 ## Usage responsable
 
-Les éléments offensifs présents ou à venir sont destinés exclusivement à l’environnement RésiSanté isolé et autorisé. Toute utilisation contre un système tiers nécessite l’autorisation explicite de son propriétaire.
+Les techniques offensives présentes ou à venir sont exclusivement destinées au laboratoire RésiSanté isolé et autorisé. Toute utilisation contre un système tiers nécessite l’autorisation explicite de son propriétaire.
