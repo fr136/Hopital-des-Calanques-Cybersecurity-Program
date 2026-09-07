@@ -4,6 +4,8 @@ RésiSanté est le **projet principal** de ce dépôt : conception, sécurisatio
 
 Le projet s’appuie sur un établissement entièrement fictif, **l’Hôpital des Calanques**, utilisé comme cadre métier et GRC. Aucun système hospitalier réel, aucune donnée patient réelle et aucun secret de production ne sont utilisés.
 
+**Présentation courte du projet : [`DEMO.md`](DEMO.md)**
+
 ## Vue d’ensemble
 
 L’objectif n’est pas d’empiler des technologies, mais de démontrer une démarche complète :
